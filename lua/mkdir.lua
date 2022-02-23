@@ -10,7 +10,7 @@ local M = {}
 function M.run()
   local dir = fn.expand('%:p:h')
 
-  if fn.isdirectory(dir) == 0 and dir:find("^fugitive://") == nil then
+  if fn.isdirectory(dir) == 0 and dir:find("^\(fugitive\|suda\)://") == nil then
     fn.mkdir(dir, 'p')
   end
 end
